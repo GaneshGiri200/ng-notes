@@ -1,0 +1,69 @@
+Angular component lifecycle hooks 
+
+ Lifecycle Hooks
+    1)ngOnChanges()
+    2)ngOnInit()
+    3)ngDoCheck()
+    4)ngAfterContentInit()
+    5)ngAfterContentChecked()
+    6)ngAfterViewInit()
+    7)ngAfterViewChecked()
+    8)ngOnDestry()
+
+1)ngOnChanges()
+    - Used in pretty much any component that had an input.
+    - Called whenever an input value changes.
+    - Is called the first time before ngOnInit.
+
+2)ngOnInit()
+    -Used to initialize data in a component.
+    - Called after inout values are set when a component is initialized.
+    - Added to every component by default by Angualar CLI.
+    -Called only once.
+
+3)ngDoCheck()
+    - Called during all change detection runs
+    - Arun through the view by ANgular to update/dtect changes.
+
+4)ngAfterContentInit()
+    - Called only once after first ngDOCheck()
+    - Called after the first run throgh of intializing content.
+
+
+5)ngAfterContentChecked()
+    - Called after every ngDoCheck()
+    - Waits till after ngAfterContentInit() on first run through
+
+
+6)ngAfterViewInit()
+    -Called after Angular initializes component an child content.
+    - Called only once after view intialized.
+
+7)ngAfterViewChecked()
+    - Called after all the content is initialised and checked. (Component and Child component).
+    -First call is after ngAfterViewInit()
+    -Called after everyContentChecked() call is completed.
+
+8)ngOnDestry()
+    - Used to clean up any necessary code when a component is removed from the DOM.
+    - Fairly aftern used to unsubscribed from the things like services.
+    - Called only once just before componenent is removed from the DOM.   
+
+1. By default we have ngonit 
+
+2. Whichever lifecycle hooks we want to use
+    1. import it in the class 
+    2. Extend the implements interface 
+    3. Implement the method  
+
+3. We can have any number of lifecycle hooks implemented 
+
+4. Its too early for us to implement all of them today 
+
+    - We will revisit this topic again component communication 
+
+    - Component Communication 
+        - Between components 
+            Parent to Child 
+            Child to Parent 
+

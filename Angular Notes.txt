@@ -1,0 +1,305 @@
+
+Features of angular:
+1.Develop Across all platforms
+2.speed and performance
+3.Incredible Tooling
+4.Large Communitiy
+
+What should we know
+-html,css,js,basic ts
+
+s/w requirement 
+nodejs, npm, ts, angular.
+
+node -v
+npm -v
+tsc -v
+npm install -g typescript //install typescript
+ng --version
+npm install -g @angular/cli //linstall angular
+
+ng new proect-name
+ng new myapp > cd myapp > ng serve > go to browser write localhost:4200
+
+ImpNote: in angular only index.html page renders.
+
+root module: app.module.ts
+module:it is collection of components, pipes, services, routing file other file.
+
+root compnent: app.component.ts
+	component: it is portion in angualr which we are going to display in angular app. it contains=>html,css, ts, spect.ts
+
+root routing file: app-routing.module.ts
+
+==========================================
+Video 1: 05/05/2021
+  es
+component: html, css, ts, spect.ts.
+
+To generate components
+
+ng generate component component-name
+
+DataBinding
+1.Interpolation {{}} :ts=>html 
+2.Property Binding []: ts=>html (here we set attribute value)
+3.Event binding (): html=>ts
+4.Two-way DataBinding [()]i: html<=>ts (in this we use ngmodel directory, which is part of forms module
+ and for this we have to import FormsModules)
+
+ task1 : chnage image on button
+
+ =======================================
+ Video 2
+
+refrence variable (#)
+
+Directives:In angular Directives use for changing DOM element layout as well as appearence and behaviour of it.
+
+1.Component Directives: It is used to display component view and templet.
+2.Structural Directives: It is used to change DOM element layout and it is denoted by *(asterik) symbol(*ngIf, *ngFor,
+*ngSwitchCase).
+
+3.Attribute Directives: It is used to chnage appearance and behaviour of DOM element.
+4.Custome Directives: We can create own directives.
+
+==========================================
+Video 3 (10/5/2021)
+
+ng-template: it is used to display output conditionally
+
+Attribude Directives: we can chage the appearence and behaviour of DOM element.
+
+ngStyle,ngClass,ngModel
+
+ngStyle: It is used to apply css property and value to DOM element.
+ngClass: here we can apply multiple cseos classes to DOM element.
+
+Task -2
+
+==========================================
+Video 4.1 & 4.2: 10/05/2021
+
+*Atrribute directive: we can change appearance and behaviour of Dom element.
+ngStyle, ngClass, ngModule
+
+ngStyle: It is used to apply css property and value to the DOM element.
+ngClass: here we can apply multiple CSS classes to the DOM element.
+ngModule: used to perform two way Data Binding.
+
+task2: solution
+===========================================
+video5: 11/05/2021
+
+task2: list display and slected Item (done) 
+
+npm install bootstrap	//to install bootstrap
+
+*pipes: we can transform property value without changing its original value.
+1.Inbuilt pipes
+2.Custom pipes
+3.Third party pipes
+===========================================
+Video6: 12/05/2021
+
+*Custom pipes: 
+*custom pipe without parameter
+*custom pipe with  parameter
+*how to create constaant file and access data from it
+
+*constant
+
+ng g pipe shared/customepipe/pipe-name
+=========================================
+video7: 13-5-2021
+
+*component interation: here we can get data from one componenth into anather.
+			- we need to establish parent child relation between components.
+			-@input(): we can get data from parent to child components.(input decorator)
+			-@output(): we can get data back from child to parent as well as we need to use object EvenEmitter class.(output decoator)
+
+=========================================
+video8: 14-5-2021
+
+*Routing: we can display components view on browser by setting routing path of components.
+	
+	Routing components view aways render below "router-outlet" directory.
+	-routing is js object and in this we pass two or more keys.
+	because of routing we can display the ecompoent view on the browser by settig the routing path.
+
+1.naming routing		//in this we set path name for components
+2.default routing 		// in this we keep path blank
+2.redirect routing		// here we use redirectTo and pathMatch:"full";
+3.parameterize routing	//in this we set parameter in routing path. ex: localhost://4200/pipe/(105/naming(parameter)
+5.child routing		// defining routing inside another is called child routing. children property
+6.wild-card routing	// it is denoted by ** , and it should be last routing in your routing file.
+
+nav, Angularforms, footer, utdf, rtf, pageNotFound
+
+===========================================
+video9: 17-5-2021
+
+*child routing
+*parameterise routing
+*router class: with the help of routing class object we can set routing parameter in routing paths as well as
+we can perform routing using navigate method.
+===========================================
+video10: 18-5-2021 
+
+view child decorator: we can get property and methods from one component to another
+
+but not completed in this lecture totally wasted
+
+===========================================
+video11 &12: 19-5-2021 &20-5-2021
+
+@ViewChild Decorator done (but not working in myside ) lets see in future
+1.UTDF: when we have to create simple form in angular as well as we want to perform form validation at html page we can use UTDF
+			in this we use ngForm, ngModel directory
+			here in utdf we write form validation at html page 
+			most of the code written n html
+
+2.RTF(reactive template form)/modal driven form: when we want to write complex logical code to perform form validation we use rtf
+			in this validation code write in ts file
+			in this we use FormGroup and FormControl class and to perform as well as to perform validation we use Validators class
+			while using reactive form in anular we need to import it in root module (app.module.ts).
+
+			how to access constant in component
+
+check FormTable.png 
+==========================================
+video13: 21-5-2021
+
+formbuilder: it s used to write code n short way it has three method
+1.group(): it return object :
+2.array():it return object of array;
+2.control():it return object of contol;
+
+to use form builder we need to create nstance in the constructor and then we can use it
+++++++++++++++++++++++++++++++++++++++++++
+==========================================
+video 15: 25/05/2021
+
+*Services -> it is a smple class with extra functionality.
+				we can share the data among the component 
+				we can implement business logic  in it.
+				we can perform external communication (database operation).
+
+		if you want to access service data and functionality in any component we need to create service class object 
+		into component constructor this process is called as dependancy injection.
+
+ng g service-name  // generate service
+
+========================================
+video16: 26/05/2021
+
+*Custom Module
+ng g module module-name  //genenrate custom module
+ng g module module-name --routing		//generate cutom module with routing file
+
+ng g c crud/add	it will generate cmponent in crud module
+
+*Lazyloading: loading module on demand.
+========================================
+vdeo17: 27-5-2021
+
+*REST fake API  - 
+-API (Application Programming interface) 
+-REST (Representational state Transform)
+
+JSON- JavaScript Object Notation
+*server - json server (Json Server.png)
+
+we have HttpClientModule => in angular it allow to send reques to server database
+
+it is third party module we need to import
+
+step-1: npm install  -g json -sever
+steo:2: create json file
+step-3: reach to json file and upload dtatbse to json-server
+		json-server --watch db.json
+
+get request for /employee => http://localhost:3000/employee
+get request with id for /employee => http://localhost:3000/employee/103
+
+post request for /employee => http://localhost:3000/employee
+
+put request for /employee/id => http://localhost:3000/employee/102
+
+delet request for /employee => http://localhost:3000/employee/102
+
+===============================================
+video18: 28-5-2021
+
+*HttpMechanism Diagram 
+
+*observable is used to handle asynchronous request
+
+*Creating model for observabe
+
+ng generate class shared/interfaces/Employee --type=model  //create the model class (Simple class)
+
+C
+R -read done
+U
+D
+
+========================================
+video19: 31-5-2021
+
+npm i font-awesome  //to install font awesome
+
+done add form
+
+========================================
+video20: 1&20.2: 1-6-2021
+
+add opertion completed
+
+Edit Operation
+step-1: send id from component to => services => Server/databse
+step-2: Server/dtatbse =>Services => recived data in edit-component
+
+update-data in coponemt => services => server/databse
+
+-ActivaedRout Class: it allows us to get parameter from browser url
+=======================================
+video21: 2-6-2021
+
+Third Party Pipes
+
+1.ngx pagination	//npm i ngx-pagination	--save
+2.ng2-search-filter	//npm i ng2-search-filter --save
+
+========================================
+video:22: 3-6-2021
+
+*How to create global service
+*How to handle db server error
+
+========================================
+video23: 4-6-2021
+
+*guard 
+
+ng g guard guard-name
+ng g guard shared/Authentication/Auth
+
+========================================
+video:24 7-6-2021
+
+webstorage : we can store user data on browser
+
+local storage: store data for permanently
+session storage: store data for limited time
+
+sessionStorage.setItem("key", "value" ); //key and value are in string formate this methos is to create session data
+''.getItem("key"); //this methos to get session data 
+''.removeItem("key"); //this method is to remove session data
+
+''.clear() // this method is to clear the session data
+
+these method is made in GlobalServce
+
+
+

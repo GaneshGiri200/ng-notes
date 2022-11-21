@@ -1,0 +1,148 @@
+1. Project folder <project_name>
+
+	ng new <project_name>
+
+2. e2e
+	-protractor framework
+		- by default
+	- end to end test scripts
+	- will end with .e2e-spec.ts extendion
+
+	src
+		app.e2e-spec.ts
+		login.e2e-spec.ts
+
+	protractor.conf.js
+		-> configuration settings for running the end to end test scripts tsconfig.json
+		-> basic typescript setting
+
+3. src
+	-entire source code of your application is inside this src
+	-app
+		app.module.ts
+		- app component
+			- app.component.html -> view/ui/html code
+			- app.component.scss -> stylesheet
+			- app.component.spec.ts -> unit test script
+			- app.component.ts -> class file
+	-assets
+		- image
+		- mock data
+		- apis
+
+	- environments
+		- local
+		- dev
+		- qa
+		- uat
+		- prod
+
+	- favicon.ico
+
+	- index.html
+		Single Page Application
+			index.html
+				<app-root>
+
+	- main.ts
+		- bootstrapModule
+			- AppModule
+
+		- Starting point of your application
+		- Any other module in our Bootstrap is possible
+
+	- plyfills.ts
+		- supporting older browsers
+		- for browser specific things
+
+	- test.ts
+		- test sript for the main.ts file
+		- testing the main.ts file code
+
+	- angular.json
+		-> backbone of your application
+			-> scripts
+			-> ports
+			-> settings
+			-> schematics
+				-> angular cli
+					-> build
+					-> test
+
+	- karma.conf.js
+		-> spec.ts
+		-> test script runner
+		-> running or executing all our test scripts
+
+	- package.json & package-lock.json
+
+	-tsconfig
+		- build output directory
+		- sourcemap
+
+	- tslint
+		- enforce coding standards
+
+=========== Boot Process of Angular Apps ==========
+
+	ng serve
+		- compiling the app
+			- AppModule
+				- AppComponent
+				
+			- AuthModule
+				- Login
+				- CheckAuthentication
+				- Forgot
+				- NewUser
+				- LoggedIn
+
+		- test.ts
+			- test script for main.ts(here also we should change if we changed bootstrap module)
+
+		index.html 
+			AppModule
+				AppComponent
+					<app-root>
+
+
+		Whenever we do a ng sever/build/test
+			- Transpiling
+
+			main.js
+			polyfills.js
+			vendor.js ->plugin and dependencies
+			style.js
+			runtime.js
+
+=========================
+	package.json
+	package-lock.json
+
+	package.json
+		name of app
+		version of app
+
+		scripts
+		-> "npm run start"
+			-> ng serve
+				-> angular.json
+					-> build
+
+		-> we can also add our own script to package.json
+
+		-> scripts are your strating point of learning
+			- existing projects
+
+		dependencies
+			- all the modules/librearies you must have to run in prod env
+			- the prod code will mostely be optimized/minimum
+
+		devDependencies
+		    - all the modules/libraries you must have to develop your app
+		    - we may add packages/modules but we may not use them
+
+	package-lock.json
+
+
+
